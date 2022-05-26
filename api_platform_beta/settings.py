@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# 设置apps为资源路径
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -37,6 +41,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'configures.apps.ConfiguresConfig',
+    'debugtalks.apps.DebugtalksConfig',
+    'envs.apps.EnvsConfig',
+    'interfaces.apps.InterfacesConfig',
+    'projects.apps.ProjectsConfig',
+    'reports.apps.ReportsConfig',
+    'testcases.apps.TestcasesConfig',
+    'testsuites.apps.TestsuitesConfig',
+    'users.apps.UsersConfig',
+
+
+
+
+
+
 ]
 
 MIDDLEWARE = [
