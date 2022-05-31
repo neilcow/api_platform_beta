@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from utils.base_models import BaseModel
+from utils.base.base_models import BaseModel
 
 
 class Configures(BaseModel):
